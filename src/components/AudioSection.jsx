@@ -9,42 +9,33 @@ export default function AudioSection({ brand }) {
   const audioRef = useRef(null);
   const intervalRef = useRef(null);
 
-  // Engine sound URLs per brand (using public domain/CC sounds)
-  const engineSounds = {
-    porsche:
-      "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    mercedes:
-      "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    bmw: "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    audi: "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    ferrari:
-      "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    lamborghini:
-      "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    mclaren:
-      "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-    bugatti:
-      "https://www.soundjay.com/transportation/sounds/car-starting-1.mp3",
-  };
-
   useEffect(() => {
-    // Stop on brand change
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
     setPlaying(false);
     setProgress(0);
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
+    };
   }, [brand.id]);
 
   const toggle = () => {
-    if (!audioRef.current) return;
     if (playing) {
-      audioRef.current.pause();
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+      }
       setPlaying(false);
     } else {
-      audioRef.current.volume = volume;
-      audioRef.current.play().catch(() => {});
+      if (audioRef.current) {
+        audioRef.current.volume = volume;
+        audioRef.current.play().catch(() => {});
+      }
       setPlaying(true);
     }
   };
@@ -89,9 +80,6 @@ export default function AudioSection({ brand }) {
                   ? `drop-shadow(0 0 40px ${brand.accentColor}40)`
                   : "none",
                 transition: "filter 0.5s",
-              }}
-              onError={(e) => {
-                e.target.src = brand.heroImage;
               }}
             />
             {/* Vibration rings when playing */}
@@ -245,10 +233,9 @@ export default function AudioSection({ brand }) {
         </div>
       </div>
 
-      {/* Hidden audio element */}
       <audio
         ref={audioRef}
-        src={engineSounds[brand.id]}
+        src={brand.audioUrl}
         onTimeUpdate={(e) =>
           setProgress((e.target.currentTime / e.target.duration) * 100 || 0)
         }
