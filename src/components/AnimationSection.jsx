@@ -1,12 +1,24 @@
 import { useInView } from "./useInView";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export default function AnimationSection({ brand }) {
   const [ref, inView] = useInView({ threshold: 0.3 });
   const [triggered, setTriggered] = useState(false);
   const [key, setKey] = useState(0);
+  const videoRef = useRef(null);
+  const videoScale = brand.animationVideoScale ?? 1;
+  const videoPosition = brand.animationVideoPosition ?? "center center";
+  const videoFrameWidth = brand.animationVideoWidth ?? "540px";
+  const videoFrameHeight = brand.animationVideoHeight ?? "190px";
+  const videoFull = brand.animationVideoFull ?? false;
 
   const handleReplay = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+      return;
+    }
+
     setTriggered(false);
     setTimeout(() => {
       setKey((k) => k + 1);
@@ -42,7 +54,7 @@ export default function AnimationSection({ brand }) {
         <div
           className="relative overflow-hidden"
           style={{
-            height: "280px",
+            height: videoFull ? "100vh" : "280px",
             background:
               "linear-gradient(to bottom, var(--bg) 0%, var(--surface) 40%, var(--bg) 100%)",
           }}
@@ -81,32 +93,76 @@ export default function AnimationSection({ brand }) {
             />
           )}
 
-          {/* Car image animated */}
+          {/* Car video */}
           {triggered && (
             <div
               key={`car-${key}`}
               style={{
                 position: "absolute",
-                bottom: "22px",
+                bottom: videoFull ? 0 : "22px",
                 left: 0,
-                animation:
-                  "carDrive 3.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards",
-                willChange: "transform",
+                right: 0,
+                top: videoFull ? 0 : "auto",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: videoFull ? "stretch" : "flex-end",
               }}
             >
-              <img
-                src={brand.heroImage}
-                alt={brand.model}
-                style={{
-                  height: "160px",
-                  width: "auto",
-                  objectFit: "contain",
-                  filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.8))",
-                }}
-                onError={(e) => {
-                  e.target.style.display = "none";
-                }}
-              />
+              {videoFull ? (
+                <video
+                  ref={videoRef}
+                  src={brand.animationVideo || brand.heroImage}
+                  alt={brand.model}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: videoPosition,
+                    transform: `scale(${videoScale})`,
+                    transformOrigin: "center center",
+                  }}
+                  onError={(e) => {
+                    e.target.style.display = "none";
+                  }}
+                />
+              ) : (
+                <div
+                  style={{
+                    width: videoFrameWidth,
+                    height: videoFrameHeight,
+                    overflow: "hidden",
+                    borderRadius: "18px",
+                  }}
+                >
+                  <video
+                    ref={videoRef}
+                    src={brand.animationVideo || brand.heroImage}
+                    alt={brand.model}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "cover",
+                      objectPosition: videoPosition,
+                      transform: `scale(${videoScale})`,
+                      transformOrigin: "center center",
+                      filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.8))",
+                    }}
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                    }}
+                  />
+                </div>
+              )}
             </div>
           )}
 
@@ -153,10 +209,10 @@ export default function AnimationSection({ brand }) {
               e.target.style.color = brand.accentColor;
             }}
           >
-            ↺ Replay Animation
+            ↺ Replay Video
           </button>
           <span className="font-condensed text-xs text-white/20 tracking-wider">
-            CSS keyframe animation · {brand.model}
+            MP4 video · {brand.model}
           </span>
         </div>
       </div>

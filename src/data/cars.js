@@ -51,9 +51,13 @@ export const brands = [
     logoUrl: proxyImage(
       "https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Porsche_logo.svg/800px-Porsche_logo.svg.png",
     ),
-    heroImage: proxyImage(
-      "https://files.porsche.com/filestore/image/multimedia/none/992-gt3-modelimage-sideshot/model/765dfc51-51bc-11eb-80d1-005056bbdc38/porsche-model.png",
-    ),
+    heroImage: "/media/porsche/porsche_hero.png",
+    animationVideo: "/media/porsche/porsche.mp4",
+    animationVideoScale: 1.15,
+    animationVideoPosition: "center 35%",
+    animationVideoWidth: "620px",
+    animationVideoHeight: "210px",
+    animationVideoFull: true,
     frontImage: proxyImage(
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg/1280px-2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg",
     ),
