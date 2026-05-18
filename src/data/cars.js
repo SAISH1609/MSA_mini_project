@@ -62,15 +62,11 @@ export const brands = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg/1280px-2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg",
     ),
     galleryImages: [
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg/1280px-2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/2022_Porsche_911_GT3_%28992%29%2C_rear_8.26.22.jpg/1280px-2022_Porsche_911_GT3_%28992%29%2C_rear_8.26.22.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/2022_Porsche_911_GT3_%28992%29%2C_interior_8.26.22.jpg/1280px-2022_Porsche_911_GT3_%28992%29%2C_interior_8.26.22.jpg",
-      ),
+      "/media/porsche/porsche_front.jpeg",
+      "/media/porsche/porsche_rear.jpeg",
+      "/media/porsche/porsche_interior.jpeg",
+      "/media/porsche/porsche_side_2.jpg",
+      "/media/porsche/porsche_side_1.jpeg",
     ],
     basicSpecs: {
       engine: "4.0L Flat-6",
@@ -116,9 +112,11 @@ export const brands = [
     animationVideoFull: true,
     frontImage: proxyImage("https://example.com/mercedes-amg-g63-front.jpg"),
     galleryImages: [
-      proxyImage("https://example.com/mercedes-amg-g63-front-2.jpg"),
-      proxyImage("https://example.com/mercedes-amg-g63-rear.jpg"),
-      proxyImage("https://example.com/mercedes-amg-g63-interior.jpg"),
+      "/media/mercedes/mercedes_front.png",
+      "/media/mercedes/mercedes_rear.png",
+      "/media/mercedes/mercedes_interior.png",
+      "/media/mercedes/mercedes_side_2.png",
+      "/media/mercedes/mercedes_side_1.png",
     ],
     basicSpecs: {
       engine: "4.0L V8 Biturbo",
@@ -168,15 +166,11 @@ export const brands = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2024_BMW_M4_CS_%28G82%29.jpg/1280px-2024_BMW_M4_CS_%28G82%29.jpg",
     ),
     galleryImages: [
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2024_BMW_M4_CS_%28G82%29.jpg/1280px-2024_BMW_M4_CS_%28G82%29.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/2024_BMW_M4_CS_%28G82%29%2C_rear.jpg/1280px-2024_BMW_M4_CS_%28G82%29%2C_rear.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/2024_BMW_M4_CS_%28G82%29%2C_interior.jpg/1280px-2024_BMW_M4_CS_%28G82%29%2C_interior.jpg",
-      ),
+      "/media/bmw/bmw_front.png",
+      "/media/bmw/bmw_rear.png",
+      "/media/bmw/bmw_interior.png",
+      "/media/bmw/bmw_side_2.png",
+      "/media/bmw/bmw_side_1.png",
     ],
     basicSpecs: {
       engine: "3.0L I6 TwinTurbo",
@@ -226,15 +220,11 @@ export const brands = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg/1280px-2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg",
     ),
     galleryImages: [
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg/1280px-2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_rear_8.23.20.jpg/1280px-2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_rear_8.23.20.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_interior_8.23.20.jpg/1280px-2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_interior_8.23.20.jpg",
-      ),
+      "/media/audi/audi_front.png",
+      "/media/audi/audi_rear.png",
+      "/media/audi/audi_interior.png",
+      "/media/audi/audi_side_2.png",
+      "/media/audi/audi_side_1.png",
     ],
     basicSpecs: {
       engine: "5.2L V10 FSI",
@@ -284,15 +274,11 @@ export const brands = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
     ),
     galleryImages: [
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Lamborghini_Aventador_SVJ_-_rear.jpg/1280px-Lamborghini_Aventador_SVJ_-_rear.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Lamborghini_Aventador_SVJ_-_interior.jpg/1280px-Lamborghini_Aventador_SVJ_-_interior.jpg",
-      ),
+      "/media/lamborghini/lamborghini_front.webp",
+      "/media/lamborghini/lamborghini_rear.webp",
+      "/media/lamborghini/lamborghini_interior.webp",
+      "/media/lamborghini/lamborghini_side_2.webp",
+      "/media/lamborghini/lamborghini_side_1.webp",
     ],
     basicSpecs: {
       engine: "6.5L V12 Naturally Aspirated",
@@ -342,15 +328,11 @@ export const brands = [
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
     ),
     galleryImages: [
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/McLaren_765LT_-_rear.jpg/1280px-McLaren_765LT_-_rear.jpg",
-      ),
-      proxyImage(
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/McLaren_765LT_-_interior.jpg/1280px-McLaren_765LT_-_interior.jpg",
-      ),
+      "/media/mclaren/mclaren_front.png",
+      "/media/mclaren/mclaren_rear.png",
+      "/media/mclaren/mclaren_interior.png",
+      "/media/mclaren/mclaren_side_2.png",
+      "/media/mclaren/mclaren_side_1.png",
     ],
     basicSpecs: {
       engine: "4.0L V8 Twin-Turbo",
