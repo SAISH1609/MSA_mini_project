@@ -4,40 +4,6 @@ const proxyImage = (url) => {
   if (url.startsWith("/media/")) {
     return url;
   }
-
-  if (normalized.includes("porsche")) {
-    return "https://images.unsplash.com/photo-1598814165187-ed79437d7490?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cG9yc2NoZXxlbnwwfHwwfHx8MA%3D%3D";
-  }
-
-  if (normalized.includes("mercedes")) {
-    return "https://images.unsplash.com/photo-1686730540270-93f2c33351b6?w=1600&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyfGVufDB8fDB8fHww";
-  }
-
-  if (normalized.includes("bmw")) {
-    return "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1600&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww";
-  }
-
-  if (normalized.includes("audi")) {
-    return "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1600&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyfGVufDB8fDB8fHww";
-  }
-
-  if (normalized.includes("ferrari")) {
-    return "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FyfGVufDB8fDB8fHww";
-  }
-
-  if (normalized.includes("lamborghini")) {
-    return "https://images.unsplash.com/photo-1611651338412-8403fa6e3599?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG9yc2NoZXxlbnwwfHwwfHx8MA%3D%3D";
-  }
-
-  if (normalized.includes("mclaren")) {
-    return "https://images.unsplash.com/photo-1611651186486-415f04eb78e4?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBvcnNjaGV8ZW58MHx8MHx8fDA%3D";
-  }
-
-  if (normalized.includes("bugatti")) {
-    return "https://images.unsplash.com/photo-1695192193767-54887768f845?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHBvcnNjaGV8ZW58MHx8MHx8fDA%3D";
-  }
-
-  return url;
 };
 
 export const brands = [
@@ -48,9 +14,6 @@ export const brands = [
     model: "911 GT3",
     year: "2025",
     accentColor: "#C8102E",
-    logoUrl: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/en/thumb/7/70/Porsche_logo.svg/800px-Porsche_logo.svg.png",
-    ),
     heroImage: "/media/porsche/porsche_hero.png",
     animationVideo: "/media/porsche/porsche.mp4",
     animationVideoScale: 1.15,
@@ -58,9 +21,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
-    frontImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg/1280px-2022_Porsche_911_GT3_%28992%29%2C_front_8.26.22.jpg",
-    ),
+    frontImage: "/media/porsche/porsche_hero.png",
     galleryImages: [
       "/media/porsche/porsche_front.jpeg",
       "/media/porsche/porsche_rear.jpeg",
@@ -100,17 +61,14 @@ export const brands = [
     model: "AMG G63",
     year: "2025",
     accentColor: "#00ADEF",
-    logoUrl: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mercedes-Logo.svg/800px-Mercedes-Logo.svg.png",
-    ),
-    heroImage: proxyImage("https://example.com/mercedes-amg-g63.jpg"),
+    heroImage: "/media/mercedes/mercedes_hero.png",
     animationVideo: "/media/mercedes/mercedes.mp4",
     animationVideoScale: 1.15,
     animationVideoPosition: "center 35%",
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
-    frontImage: proxyImage("https://example.com/mercedes-amg-g63-front.jpg"),
+    frontImage: "/media/mercedes/mercedes_hero.png",
     galleryImages: [
       "/media/mercedes/mercedes_front.png",
       "/media/mercedes/mercedes_rear.png",
@@ -150,21 +108,14 @@ export const brands = [
     model: "2026 M4 CS",
     year: "2026",
     accentColor: "#0066B1",
-    logoUrl: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BMW.svg/800px-BMW.svg.png",
-    ),
-    heroImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2024_BMW_M4_CS_%28G82%29.jpg/1280px-2024_BMW_M4_CS_%28G82%29.jpg",
-    ),
+    heroImage: "/media/bmw/bmw_hero.png",
     animationVideo: "/media/bmw/bmw.mp4",
     animationVideoScale: 1.15,
     animationVideoPosition: "center 35%",
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
-    frontImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/2024_BMW_M4_CS_%28G82%29.jpg/1280px-2024_BMW_M4_CS_%28G82%29.jpg",
-    ),
+    frontImage: "/media/bmw/bmw_hero.png",
     galleryImages: [
       "/media/bmw/bmw_front.png",
       "/media/bmw/bmw_rear.png",
@@ -204,21 +155,14 @@ export const brands = [
     model: "R8 V10 Performance",
     year: "2025",
     accentColor: "#BB0A21",
-    logoUrl: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Audi-Logo_2016.svg/800px-Audi-Logo_2016.svg.png",
-    ),
-    heroImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg/1280px-2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg",
-    ),
+    heroImage: "/media/audi/audi_hero.png",
     animationVideo: "/media/audi/audi.mp4",
     animationVideoScale: 1.15,
     animationVideoPosition: "center 35%",
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
-    frontImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg/1280px-2020_Audi_R8_V10_Performance_%28facelift%2C_Type_4S%29%2C_front_8.23.20.jpg",
-    ),
+    frontImage: "/media/audi/audi_hero.png",
     galleryImages: [
       "/media/audi/audi_front.png",
       "/media/audi/audi_rear.png",
@@ -258,21 +202,14 @@ export const brands = [
     model: "Aventador SVJ",
     year: "2026",
     accentColor: "#F0A500",
-    logoUrl: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/en/thumb/d/d9/Lamborghini_Logo.svg/800px-Lamborghini_Logo.svg.png",
-    ),
-    heroImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
-    ),
+    heroImage: "/media/lamborghini/lamborghini_hero.png",
     animationVideo: "/media/lamborghini/lamborghini.mp4",
     animationVideoScale: 1.15,
     animationVideoPosition: "center 35%",
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
-    frontImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-Lamborghini_Aventador_SVJ_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
-    ),
+    frontImage: "/media/lamborghini/lamborghini_hero.png",
     galleryImages: [
       "/media/lamborghini/lamborghini_front.webp",
       "/media/lamborghini/lamborghini_rear.webp",
@@ -312,21 +249,14 @@ export const brands = [
     model: "765 LT",
     year: "2026",
     accentColor: "#FF6600",
-    logoUrl: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/McLaren_logo.svg/800px-McLaren_logo.svg.png",
-    ),
-    heroImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
-    ),
+    heroImage: "/media/mclaren/mclaren_hero.png",
     animationVideo: "/media/mclaren/mclaren.mp4",
     animationVideoScale: 1.15,
     animationVideoPosition: "center 35%",
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
-    frontImage: proxyImage(
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg/1280px-McLaren_765LT_-_Flickr_-_Alexandre_Pr%C3%A9vot_%281%29.jpg",
-    ),
+    frontImage: "/media/mclaren/mclaren_hero.png",
     galleryImages: [
       "/media/mclaren/mclaren_front.png",
       "/media/mclaren/mclaren_rear.png",
