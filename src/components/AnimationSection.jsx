@@ -11,6 +11,7 @@ export default function AnimationSection({ brand }) {
   const videoFrameWidth = brand.animationVideoWidth ?? "540px";
   const videoFrameHeight = brand.animationVideoHeight ?? "190px";
   const videoFull = brand.animationVideoFull ?? false;
+  const videoSrc = brand.animationVideo || `/media/${brand.id}/${brand.id}.mp4`;
 
   const handleReplay = () => {
     if (videoRef.current) {
@@ -108,11 +109,20 @@ export default function AnimationSection({ brand }) {
                 alignItems: videoFull ? "stretch" : "flex-end",
               }}
             >
-              {videoFull ? (
+              <div
+                style={{
+                  width: "100%",
+                  height: videoFull ? "100%" : videoFrameHeight,
+                  overflow: "hidden",
+                  borderRadius: videoFull ? 0 : "18px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: videoFull ? "stretch" : "center",
+                }}
+              >
                 <video
                   ref={videoRef}
-                  src={brand.animationVideo || brand.heroImage}
-                  alt={brand.model}
+                  src={videoSrc}
                   autoPlay
                   muted
                   loop
@@ -125,44 +135,13 @@ export default function AnimationSection({ brand }) {
                     objectPosition: videoPosition,
                     transform: `scale(${videoScale})`,
                     transformOrigin: "center center",
+                    display: "block",
                   }}
                   onError={(e) => {
                     e.target.style.display = "none";
                   }}
                 />
-              ) : (
-                <div
-                  style={{
-                    width: videoFrameWidth,
-                    height: videoFrameHeight,
-                    overflow: "hidden",
-                    borderRadius: "18px",
-                  }}
-                >
-                  <video
-                    ref={videoRef}
-                    src={brand.animationVideo || brand.heroImage}
-                    alt={brand.model}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    style={{
-                      height: "100%",
-                      width: "100%",
-                      objectFit: "cover",
-                      objectPosition: videoPosition,
-                      transform: `scale(${videoScale})`,
-                      transformOrigin: "center center",
-                      filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.8))",
-                    }}
-                    onError={(e) => {
-                      e.target.style.display = "none";
-                    }}
-                  />
-                </div>
-              )}
+              </div>
             </div>
           )}
 
