@@ -1,11 +1,3 @@
-const proxyImage = (url) => {
-  const normalized = url.toLowerCase();
-
-  if (url.startsWith("/media/")) {
-    return url;
-  }
-};
-
 export const brands = [
   {
     id: "porsche",
@@ -45,8 +37,7 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Michelin Pilot Sport Cup 2",
     },
-    audioUrl:
-      "https://www.soundjay.com/transportation_c2026/sounds/car-ignition-1.mp3",
+    audioUrl: "/media/porsche/porsche_audio.mp3",
     price: 195000,
     colors: ["#FFFFFF", "#C8102E", "#000000", "#1A3A5C", "#4A7C59", "#C5A028"],
     configuratorOptions: {
@@ -92,8 +83,7 @@ export const brands = [
       Brakes: "AMG High-Performance",
       Tires: "Pirelli Scorpion",
     },
-    audioUrl:
-      "https://www.soundjay.com/transportation_c2026/sounds/car-ignition-1.mp3",
+    audioUrl: "/media/mercedes/mercedes_audio.mp3",
     price: 220000,
     colors: ["#000000", "#FFFFFF", "#C0C0C0", "#1A1A2E", "#2D5016", "#C8102E"],
     configuratorOptions: {
@@ -139,8 +129,7 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Michelin Pilot Sport 4S",
     },
-    audioUrl:
-      "https://www.soundjay.com/transportation_c2026/sounds/car-ignition-1.mp3",
+    audioUrl: "/media/bmw/bmw_audio.mp3",
     price: 105000,
     colors: ["#1A1A1A", "#FFFFFF", "#0066B1", "#C8102E", "#4A4A4A", "#1B4D3E"],
     configuratorOptions: {
@@ -186,8 +175,7 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Pirelli P Zero Corsa",
     },
-    audioUrl:
-      "https://www.soundjay.com/transportation_c2026/sounds/car-ignition-1.mp3",
+    audioUrl: "/media/audi/audi_audio.mp3",
     price: 215000,
     colors: ["#C0C0C0", "#000000", "#FFFFFF", "#BB0A21", "#1A3A5C", "#2C2C2C"],
     configuratorOptions: {
@@ -233,8 +221,7 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Pirelli P Zero Corsa",
     },
-    audioUrl:
-      "https://www.soundjay.com/transportation_c2026/sounds/car-ignition-1.mp3",
+    audioUrl: "/media/lamborghini/lamborghini_audio.mp3",
     price: 517000,
     colors: ["#000000", "#FFFFFF", "#F0A500", "#C8102E", "#1A3A5C", "#00A36C"],
     configuratorOptions: {
@@ -280,8 +267,7 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Pirelli P Zero Trofeo R",
     },
-    audioUrl:
-      "https://www.soundjay.com/transportation_c2026/sounds/car-ignition-1.mp3",
+    audioUrl: "/media/mclaren/mclaren_audio.mp3",
     price: 375000,
     colors: ["#FF6600", "#000000", "#FFFFFF", "#C0C0C0", "#1A1A2E", "#CE2121"],
     configuratorOptions: {
