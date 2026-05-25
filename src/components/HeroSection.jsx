@@ -15,19 +15,6 @@ export default function HeroSection({ brand }) {
       className="relative min-h-screen flex flex-col justify-end overflow-hidden"
       style={{ background: "var(--bg)" }}
     >
-      {/* Background logo watermark */}
-      <div
-        className="absolute inset-0 flex items-center justify-end pr-16 pointer-events-none"
-        style={{ opacity: 0.04 }}
-      >
-        <img
-          src={brand.logoUrl}
-          alt=""
-          className="w-[60vw] max-w-3xl object-contain"
-          style={{ filter: "brightness(10)" }}
-        />
-      </div>
-
       {/* Accent gradient */}
       <div
         className="absolute inset-0 pointer-events-none"
