@@ -5,7 +5,7 @@ export default function GallerySection({ brand }) {
   const [ref, inView] = useInView();
   const [activeImg, setActiveImg] = useState(0);
 
-  const angles = ["Front", "Rear", "Interior"];
+  const angles = ["Front", "Rear", "Interior", "Right Side", "Left Side"];
 
   return (
     <section
@@ -42,7 +42,7 @@ export default function GallerySection({ brand }) {
                 key={activeImg}
                 src={brand.galleryImages[activeImg] || brand.heroImage}
                 alt={`${angles[activeImg]} view`}
-                className="w-full object-cover"
+                className="w-full object-contain"
                 style={{ height: "420px", animation: "fadeIn 0.4s ease" }}
                 onError={(e) => {
                   e.target.src = brand.heroImage;
@@ -80,7 +80,7 @@ export default function GallerySection({ brand }) {
                   <img
                     src={img}
                     alt={angles[i]}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                     onError={(e) => {
                       e.target.src = brand.heroImage;
                     }}
