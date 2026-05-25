@@ -71,9 +71,13 @@ export default function AudioSection({ brand }) {
             }}
           >
             <img
-              src={brand.frontImage}
+              src={`/media/${brand.id}/${brand.id}.svg`}
               alt={brand.model}
               className="w-full object-cover"
+              onError={(event) => {
+                event.currentTarget.onerror = null;
+                event.currentTarget.src = brand.frontImage;
+              }}
               style={{
                 height: "360px",
                 filter: playing

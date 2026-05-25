@@ -15,8 +15,8 @@ export default function CarPage() {
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
-    document.title = `APEX — ${brand?.name} ${brand?.model}`
-    return () => { document.title = 'APEX — Supercar Showcase' }
+    document.title = `${brand?.name} ${brand?.model} — Supercar Showcase`
+    return () => { document.title = 'Supercar Showcase' }
   }, [brandId])
 
   if (!brand) return <Navigate to="/" replace />

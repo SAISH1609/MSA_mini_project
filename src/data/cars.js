@@ -13,6 +13,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
+    logoUrl: "/media/porsche/porsche_logo.png",
     frontImage: "/media/porsche/porsche_hero.png",
     galleryImages: [
       "/media/porsche/porsche_front.jpeg",
@@ -37,8 +38,10 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Michelin Pilot Sport Cup 2",
     },
-    audioUrl: "/media/porsche/porsche_audio.mp3",
-    price: 195000,
+    audioUrl: "/media/porsche/porsche.mp3",
+    history:
+      "Founded in 1931, Porsche built its reputation on precision engineering, motorsport success, and a design language that has stayed instantly recognizable for decades. The 911 became the core of that identity, blending everyday usability with track-ready performance.",
+    price: 16185000,
     colors: ["#FFFFFF", "#C8102E", "#000000", "#1A3A5C", "#4A7C59", "#C5A028"],
     configuratorOptions: {
       wheels: ["Standard GT3", "Lightweight Forged", "Center-Lock"],
@@ -59,6 +62,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
+    logoUrl: "/media/mercedes/mercedes_logo.png",
     frontImage: "/media/mercedes/mercedes_hero.png",
     galleryImages: [
       "/media/mercedes/mercedes_front.png",
@@ -83,8 +87,10 @@ export const brands = [
       Brakes: "AMG High-Performance",
       Tires: "Pirelli Scorpion",
     },
-    audioUrl: "/media/mercedes/mercedes_audio.mp3",
-    price: 220000,
+    audioUrl: "/media/mercedes/mercedes.mp3",
+    history:
+      "Mercedes-Benz traces its roots to the birth of the automobile in the late 19th century. Over time, the brand became a symbol of engineering refinement, luxury, and technological leadership, with AMG pushing its performance identity even further.",
+    price: 18260000,
     colors: ["#000000", "#FFFFFF", "#C0C0C0", "#1A1A2E", "#2D5016", "#C8102E"],
     configuratorOptions: {
       wheels: ["AMG Twin 5-Spoke", "AMG Cross-Spoke", "AMG Forged"],
@@ -105,6 +111,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
+    logoUrl: "/media/bmw/bmw_logo.png",
     frontImage: "/media/bmw/bmw_hero.png",
     galleryImages: [
       "/media/bmw/bmw_front.png",
@@ -129,8 +136,10 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Michelin Pilot Sport 4S",
     },
-    audioUrl: "/media/bmw/bmw_audio.mp3",
-    price: 105000,
+    audioUrl: "/media/bmw/bmw.mp3",
+    history:
+      "BMW began in 1916 and grew from aviation engineering into one of the most recognized performance and premium automotive brands in the world. Its identity has long centered on balance, driving dynamics, and a strong motorsport legacy.",
+    price: 8715000,
     colors: ["#1A1A1A", "#FFFFFF", "#0066B1", "#C8102E", "#4A4A4A", "#1B4D3E"],
     configuratorOptions: {
       wheels: ["M Double-Spoke", "M Forged", "Track Pack"],
@@ -151,6 +160,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
+    logoUrl: "/media/audi/audi_logo.png",
     frontImage: "/media/audi/audi_hero.png",
     galleryImages: [
       "/media/audi/audi_front.png",
@@ -175,8 +185,10 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Pirelli P Zero Corsa",
     },
-    audioUrl: "/media/audi/audi_audio.mp3",
-    price: 215000,
+    audioUrl: "/media/audi/audi.mp3",
+    history:
+      "Audi evolved from early 20th-century German engineering roots into a modern technology-focused performance brand. Its four rings represent the Auto Union legacy, while quattro all-wheel drive helped define its competition and road-car reputation.",
+    price: 17845000,
     colors: ["#C0C0C0", "#000000", "#FFFFFF", "#BB0A21", "#1A3A5C", "#2C2C2C"],
     configuratorOptions: {
       wheels: ["10-Spoke", "5-Twin-Spoke", "Audi Sport Forged"],
@@ -197,6 +209,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
+    logoUrl: "/media/lamborghini/lamborghini_logo.png",
     frontImage: "/media/lamborghini/lamborghini_hero.png",
     galleryImages: [
       "/media/lamborghini/lamborghini_front.webp",
@@ -221,8 +234,10 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Pirelli P Zero Corsa",
     },
-    audioUrl: "/media/lamborghini/lamborghini_audio.mp3",
-    price: 517000,
+    audioUrl: "/media/lamborghini/lamborghini.mp3",
+    history:
+      "Lamborghini was founded in 1963 by Ferruccio Lamborghini to challenge the status quo of grand touring cars. The brand quickly became known for dramatic styling, V12 power, and an unmistakably extroverted personality.",
+    price: 42911000,
     colors: ["#000000", "#FFFFFF", "#F0A500", "#C8102E", "#1A3A5C", "#00A36C"],
     configuratorOptions: {
       wheels: ["Forged Y-Spoke", "Center Lock", "SVJ Lightweight"],
@@ -243,6 +258,7 @@ export const brands = [
     animationVideoWidth: "620px",
     animationVideoHeight: "210px",
     animationVideoFull: true,
+    logoUrl: "/media/mclaren/mclaren_logo.png",
     frontImage: "/media/mclaren/mclaren_hero.png",
     galleryImages: [
       "/media/mclaren/mclaren_front.png",
@@ -267,8 +283,10 @@ export const brands = [
       Brakes: "Carbon Ceramic",
       Tires: "Pirelli P Zero Trofeo R",
     },
-    audioUrl: "/media/mclaren/mclaren_audio.mp3",
-    price: 375000,
+    audioUrl: "/media/mclaren/mclaren.mp3",
+    history:
+      "McLaren's road-car division grew out of a deep racing culture that began with Bruce McLaren in 1963. The brand is known for lightweight engineering, aerodynamic efficiency, and a relentless focus on performance innovation.",
+    price: 31125000,
     colors: ["#FF6600", "#000000", "#FFFFFF", "#C0C0C0", "#1A1A2E", "#CE2121"],
     configuratorOptions: {
       wheels: ["LT Lightweight", "MSO Forged", "Carbon Black"],

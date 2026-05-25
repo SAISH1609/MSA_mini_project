@@ -34,7 +34,7 @@ export default function Home() {
         style={{ opacity: 0.03 }}
       >
         <span className="font-display text-[28vw] leading-none tracking-tighter text-white">
-          APEX
+        MSA PROJECT
         </span>
       </div>
 
@@ -67,7 +67,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="font-body font-light text-white/40 text-lg max-w-md mt-6 leading-relaxed">
-              Eight icons. Eight legacies. Select a marque to begin your journey
+              Six icons. Six legacies. Select a marque to begin your journey
               into automotive excellence.
             </p>
           </div>
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Brand Grid */}
         <div className="flex-1 px-8 lg:px-20 pb-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {brands.map((brand, i) => (
               <Link
                 key={brand.id}
@@ -185,7 +185,7 @@ export default function Home() {
         {/* Footer line */}
         <div className="px-8 lg:px-20 pb-8 flex items-center justify-between">
           <span className="font-condensed text-xs tracking-widest text-white/20 uppercase">
-            © 2025 Apex Showcase — Multimedia Mini Project
+            © 2025 Supercar Showcase — Six-car Multimedia Mini Project
           </span>
           <span className="font-condensed text-xs tracking-widest text-white/20 uppercase">
             IT3 Evaluation

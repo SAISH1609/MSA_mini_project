@@ -170,7 +170,7 @@ export default function AnimationSection({ brand }) {
           </div>
         </div>
 
-        {/* Controls */}
+        {/* Controls 
         <div className="px-8 lg:px-20 mt-8 flex items-center gap-6">
           <button
             onClick={handleReplay}
@@ -193,7 +193,7 @@ export default function AnimationSection({ brand }) {
           <span className="font-condensed text-xs text-white/20 tracking-wider">
             MP4 video · {brand.model}
           </span>
-        </div>
+        </div>*/}
       </div>
     </section>
   );
