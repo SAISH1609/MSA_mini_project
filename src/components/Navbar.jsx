@@ -56,7 +56,7 @@ export default function Navbar() {
           className="font-display text-2xl tracking-widest"
           style={{ color: accent, transition: "color 0.5s" }}
         >
-          APEX
+          MSA PROJECT
         </Link>
 
         {/* Desktop brand links */}

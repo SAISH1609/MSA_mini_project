@@ -6,6 +6,12 @@ export default function GallerySection({ brand }) {
   const [activeImg, setActiveImg] = useState(0);
 
   const angles = ["Front", "Rear", "Interior", "Right Side", "Left Side"];
+  const formatINR = (value) =>
+    new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 0,
+    }).format(value);
 
   return (
     <section
@@ -153,7 +159,7 @@ export default function GallerySection({ brand }) {
                 className="font-display text-4xl"
                 style={{ color: brand.accentColor }}
               >
-                ${brand.price.toLocaleString()}
+                {formatINR(brand.price)}
               </div>
               <div className="font-condensed text-xs text-white/20 mt-1 tracking-wider">
                 Before taxes & options

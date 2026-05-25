@@ -64,13 +64,13 @@ export default function HeroSection({ brand }) {
             transitionDelay: "0.1s",
           }}
         >
-          <div className="h-px w-8" style={{ background: brand.accentColor }} />
+          {/*<div className="h-px w-8" style={{ background: brand.accentColor }} />
           <span
             className="font-condensed text-xs tracking-[0.4em] uppercase"
             style={{ color: brand.accentColor }}
           >
             {brand.year} Collection
-          </span>
+          </span>*/}
         </div>
 
         {/* Brand name huge */}
@@ -151,7 +151,7 @@ export default function HeroSection({ brand }) {
               e.target.style.color = "rgba(255,255,255,0.6)";
             }}
           >
-            Configure
+            History
           </a>
         </div>
       </div>
